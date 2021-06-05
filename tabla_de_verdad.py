@@ -23,7 +23,7 @@ def tabla(numero):
 		for veces in range(numero-1):
 			base=base+total
 			matriz2[index].append(matriz[base])
-		#print(matriz2[index],(index/total)*100,"%",end='             \r')
+		print(matriz2[index],(index/total)*100,"%",end='             \r')
 	print("")
 	print("--------------------------100%--------------------------")
 	print(time.time()-ini)
@@ -71,7 +71,7 @@ def tabla_bruta (numero):
 		for index in range(int(veces)):
 			valor=bool( index%2)
 			matriz+=[valor]*int(ceros)
-			#print(valor,(index/total)*100,"%",end='             \r')
+			print(valor,(index/total)*100,"%",end='             \r')
 		memoria=memoria/2
 	print(time.time()-ini)
 	return matriz
