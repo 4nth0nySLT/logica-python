@@ -44,7 +44,7 @@ Posibilidades: 32
 [1, 1, 1, 1, 1]
 ```
 
-## Pruebas de velocidad
+## Pruebas de velocidad Python
 ```
 >>> a=tabla(20)
 Posibilidades: 1048576
@@ -62,4 +62,19 @@ Posibilidades: 1048576
 
 --------------------------100%--------------------------
 6.017228364944458
+>>> a=tabla_bruta(20)
+Posibilidades: 1048576
+1.7344977855682373
+>>> a=tabla_bruta(22)
+Posibilidades: 4194304
+7.5070412158966064
+```
+## Pruebas de velocidad Go
+```
+>>> go run tabla_de_verdad.go 20 tabla_bruta
+Posibilidades: 1048576
+0.2835185
+>>> go run tabla_de_verdad.go 22 tabla_bruta
+Posibilidades: 4194304
+1.0564341
 ```
