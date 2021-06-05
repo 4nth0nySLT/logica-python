@@ -69,6 +69,12 @@ Posibilidades: 1048576
 >>> a=tabla_bruta(22)
 Posibilidades: 4194304
 7.5070412158966064
+>>> a=tabla_bruta_version2(20)
+Posibilidades: 1048576
+0.8977727890014648
+>>> a=tabla_bruta_version2(22)
+Posibilidades: 4194304
+3.89097261428833
 ```
 ### Go
 ```
