@@ -64,7 +64,6 @@ def tabla_bruta (numero):
 	print("Posibilidades:",total)
 	memoria=total
 	matriz=[]
-	matriz2=[]
 	for z in range(1,numero+1):
 		ceros=memoria/2
 		veces=total/ceros
@@ -72,6 +71,23 @@ def tabla_bruta (numero):
 			valor=bool( index%2)
 			matriz+=[valor]*int(ceros)
 			print(valor,(index/total)*100,"%",end='             \r')
+		memoria=memoria/2
+	print(time.time()-ini)
+	return matriz
+
+def tabla_bruta2 (numero):
+	ini=time.time()
+	total=2**numero
+	print("Posibilidades:",total)
+	memoria=total
+	matriz=[]
+	for z in range(1,numero+1):
+		ceros=memoria/2
+		veces=total/ceros
+		for index in range(int(veces)):
+			valor=int( index%2)
+			matriz+=[valor]*int(ceros)
+			#print(valor,(index/total)*100,"%",end='             \r')
 		memoria=memoria/2
 	print(time.time()-ini)
 	return matriz
