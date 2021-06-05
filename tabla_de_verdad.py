@@ -54,7 +54,7 @@ def tabla_version2 (numero):
 		print(matriz2[index],(index/total)*100,"%",end='             \r')
 	print("")
 	print("--------------------------100%--------------------------")
-	matriz2.append(np.logical_not(matriz2).tolist())
+	matriz2+=np.logical_not(matriz2).tolist()
 	print(time.time()-ini)
 	return matriz2
 
