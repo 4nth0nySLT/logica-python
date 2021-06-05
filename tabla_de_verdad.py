@@ -75,7 +75,7 @@ def tabla_bruta (numero):
 	print(time.time()-ini)
 	return matriz
 
-def tabla_bruta2 (numero):
+def tabla_bruta_version2 (numero):
 	ini=time.time()
 	total=2**numero
 	print("Posibilidades:",total)
