@@ -56,4 +56,10 @@ Posibilidades: 1048576
 [False, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True] 49.99990463256836 %
 --------------------------100%--------------------------
 24.78977346420288
+>>> a=tabla_version3(20)
+Posibilidades: 1048576
+0.928030252456665
+
+--------------------------100%--------------------------
+6.017228364944458
 ```
