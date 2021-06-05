@@ -58,4 +58,19 @@ def tabla_version2 (numero):
 	print(time.time()-ini)
 	return matriz2
 
-
+def tabla_bruta (numero):
+	ini=time.time()
+	total=2**numero
+	print("Posibilidades:",total)
+	memoria=total
+	matriz=[]
+	matriz2=[]
+	for z in range(1,numero+1):
+		ceros=memoria/2
+		veces=total/ceros
+		for index in range(int(veces)):
+			for _ in range(int(ceros)):
+				matriz.append(bool( index%2))
+				print(bool( index%2),(index/total)*100,"%",end='             \r')
+		memoria=memoria/2
+	return matriz
