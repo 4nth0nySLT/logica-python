@@ -43,3 +43,17 @@ Posibilidades: 32
 [1, 1, 1, 1, 0]
 [1, 1, 1, 1, 1]
 ```
+
+## Pruebas de velocidad
+```
+>>> a=tabla(20)
+Posibilidades: 1048576
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] 99.99990463256836 %
+--------------------------100%--------------------------
+41.05933380126953
+>>> a=tabla_version2(20)
+Posibilidades: 1048576
+[False, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True, True] 49.99990463256836 %
+--------------------------100%--------------------------
+24.78977346420288
+```
