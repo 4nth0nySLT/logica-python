@@ -23,7 +23,7 @@ def tabla(numero):
 		for veces in range(numero-1):
 			base=base+total
 			matriz2[index].append(matriz[base])
-		print(matriz2[index],(index/total)*100,"%",end='             \r')
+		#print(matriz2[index],(index/total)*100,"%",end='             \r')
 	print("")
 	print("--------------------------100%--------------------------")
 	print(time.time()-ini)
@@ -51,7 +51,7 @@ def tabla_version2 (numero):
 		for veces in range(numero-1):
 			base=base+total
 			matriz2[index].append(matriz[base])
-		print(matriz2[index],(index/total)*100,"%",end='             \r')
+		#print(matriz2[index],(index/total)*100,"%",end='             \r')
 	print("")
 	print("--------------------------100%--------------------------")
 	matriz2+=np.logical_not(matriz2).tolist()
@@ -69,8 +69,9 @@ def tabla_bruta (numero):
 		ceros=memoria/2
 		veces=total/ceros
 		for index in range(int(veces)):
-			for _ in range(int(ceros)):
-				matriz.append(bool( index%2))
-				print(bool( index%2),(index/total)*100,"%",end='             \r')
+			valor=bool( index%2)
+			matriz+=[valor]*int(ceros)
+			#print(valor,(index/total)*100,"%",end='             \r')
 		memoria=memoria/2
+	print(time.time()-ini)
 	return matriz
