@@ -76,13 +76,13 @@ Posibilidades: 1048576
 6.022998571395874
 >>> x=tabla_de_verdad.tabla_version3(20)
 Posibilidades: 1048576
-3.2254438400268555 seg
+3.2254438400268555 seg creando la tabla bruta
 
 --------------------------100%--------------------------
 6.0349509716033936
 >>> x=tabla_de_verdad.tabla_version4(20)
 Posibilidades: 1048576
-0.926584005355835 seg
+0.926584005355835 seg creando la tabla bruta
 
 --------------------------100%--------------------------
 4.103060483932495 seg
