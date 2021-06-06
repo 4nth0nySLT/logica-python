@@ -129,3 +129,40 @@ def tabla_version4 (numero):
 	matriz2+=np.logical_not(matriz2).tolist()
 	print(time.time()-ini)
 	return matriz2
+
+
+def getValores(numero,indice):
+	# ERROR ON getValores(20,29392)
+	# Falla cuando cuadrado>8, falta establecer una constante
+	total=2**numero
+	if indice>total:
+		return
+	cuadrados=[(2**cuadrado)/2 for cuadrado in range(1,numero+1)][::-1]
+	resultado=[]
+	for cuadrado in cuadrados:
+		if cuadrado==1:
+			resultado.append(int(not indice%2))
+		#elif cuadrados.index(cuadrado)==0:
+		elif cuadrado==indice:
+			resultado.append(0)
+		#else:
+		#	print(int(indice//cuadrado))
+		#elif indice*2==cuadrado:
+		#	resultado.append(1)
+		elif indice==total:
+			resultado.append(1)
+		elif cuadrado==2:
+			resultado.append(int(not(int((indice/cuadrado)+0.5))%2))
+		elif cuadrado==4:
+			valor=round((indice/cuadrado)+0.325)%2
+			resultado.append(int(not valor))
+		elif cuadrado==8:
+			valor=round((indice/cuadrado)+0.425)%2
+			resultado.append(int(not valor))
+		elif cuadrado%2==1:
+			resultado.append(not (int((indice/cuadrado)+0.5))%2)
+		else:
+			resultado.append(int((indice//cuadrado)%2))
+		#print(indice,cuadrado)
+	print(resultado)
+
