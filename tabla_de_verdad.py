@@ -185,3 +185,31 @@ def getValores(numero,indice):
 getValores_unalinea=lambda numero,indice: [int((indice-1)/cuadrado)%2 if (indice-1)!=int((indice-1)/cuadrado)+1 else int((indice-1)-1/cuadrado)%2  for cuadrado in [(2**cuadrado)/2 for cuadrado in range(1,numero+1)][::-1]] 
 
 
+def tabla_version_unalinea(numero):
+	return [getValores_unalinea(numero,indice) for indice in range(1,2**numero+1)]
+
+
+def tabla_version5(numero):
+	ini=time.time()
+	resultado=[]
+	total=2**numero
+	for indice in range(1,total+1):
+		resultado.append(getValores_unalinea(numero,indice))
+		#print(indice,"de",total,end="\r")
+	print("")
+	print(time.time()-ini)
+	return resultado
+
+
+def tabla_version6(numero):
+	ini=time.time()
+	resultado=[]
+	total=2**numero
+	for indice in range(1,int(total/2)+1):
+		resultado.append(getValores_unalinea(numero,indice))
+		#print(indice,"de",total,end="\r")
+	print("")
+	print(time.time()-ini)
+	return resultado+logical_not(resultado).tolist()
+
+
