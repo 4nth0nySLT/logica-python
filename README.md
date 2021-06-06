@@ -63,29 +63,39 @@ Posibilidades: 32
 ## Pruebas de velocidad 
 ### Python
 ```
-x=tabla_de_verdad.tabla(20)
+>>> x=tabla_de_verdad.tabla(20)
 Posibilidades: 1048576
 
 --------------------------100%--------------------------
 6.449751615524292 seg
-x=tabla_de_verdad.tabla_version2(20)
+>>> x=tabla_de_verdad.tabla_version2(20)
 Posibilidades: 1048576
 
 --------------------------100%--------------------------
 6.022998571395874
-x=tabla_de_verdad.tabla_version3(20)
+>>> x=tabla_de_verdad.tabla_version3(20)
 Posibilidades: 1048576
 3.2254438400268555 seg
 
 --------------------------100%--------------------------
 6.0349509716033936
-x=tabla_de_verdad.tabla_version4(20)
+>>> x=tabla_de_verdad.tabla_version4(20)
 Posibilidades: 1048576
 0.926584005355835 seg
 
 --------------------------100%--------------------------
 4.103060483932495 seg
 ```
+#### posibles errores en las tablas anteriores
+```
+>>> x=tabla_version5(20)
+
+13.088716268539429
+>>> x=tabla_version6(20)
+
+6.666651964187622
+```
+
 ### Go
 ```
 >>> go run tabla_de_verdad.go 20 tabla_bruta
