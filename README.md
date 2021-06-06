@@ -45,13 +45,17 @@ Posibilidades: 32
 ```
 
 ```
->>> tabla_de_verdad.getValores(5,1)
+>>> x=getValores(5,1)
+0.0 seg
 [0, 0, 0, 0, 0]
->>> tabla_de_verdad.getValores(5,2)
+>>> x=getValores(5,2)
+0.0 seg
 [0, 0, 0, 0, 1]
->>> tabla_de_verdad.getValores(5,21)
+>>> x=getValores(5,21)
+0.0 seg
 [1, 0, 1, 0, 0]
->>> tabla_de_verdad.getValores(5,32)
+>>> x=getValores(5,32)
+0.0 seg
 [1, 1, 1, 1, 1]
 ```
 
@@ -63,7 +67,7 @@ x=tabla_de_verdad.tabla(20)
 Posibilidades: 1048576
 
 --------------------------100%--------------------------
-6.449751615524292
+6.449751615524292 seg
 x=tabla_de_verdad.tabla_version2(20)
 Posibilidades: 1048576
 
@@ -71,23 +75,23 @@ Posibilidades: 1048576
 6.022998571395874
 x=tabla_de_verdad.tabla_version3(20)
 Posibilidades: 1048576
-3.2254438400268555
+3.2254438400268555 seg
 
 --------------------------100%--------------------------
 6.0349509716033936
 x=tabla_de_verdad.tabla_version4(20)
 Posibilidades: 1048576
-0.926584005355835
+0.926584005355835 seg
 
 --------------------------100%--------------------------
-4.103060483932495
+4.103060483932495 seg
 ```
 ### Go
 ```
 >>> go run tabla_de_verdad.go 20 tabla_bruta
 Posibilidades: 1048576
-0.2835185
+0.2835185 seg
 >>> go run tabla_de_verdad.go 22 tabla_bruta
 Posibilidades: 4194304
-1.0564341
+1.0564341 seg
 ```
