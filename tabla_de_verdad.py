@@ -23,7 +23,7 @@ def tabla(numero):
 		for veces in range(numero-1):
 			base=base+total
 			matriz2[index].append(matriz[base])
-		print(matriz2[index],(index/total)*100,"%",end='             \r')
+		#print(matriz2[index],(index/total)*100,"%",end='             \r')
 	print("")
 	print("--------------------------100%--------------------------")
 	print(time.time()-ini)
