@@ -110,3 +110,22 @@ def tabla_version3 (numero):
 	matriz2+=np.logical_not(matriz2).tolist()
 	print(time.time()-ini)
 	return matriz2
+
+def tabla_version4 (numero):
+	ini=time.time()
+	total=2**numero
+	matriz2=[]
+	matriz=tabla_bruta_version2(numero)
+	for index in range(0,int(total/2)):
+		matriz2.append([])
+		matriz2[index].append(matriz[index])
+		base=index
+		for veces in range(numero-1):
+			base=base+total
+			matriz2[index].append(matriz[base])
+		#print(matriz2[index],(index/total)*100,"%",end='             \r')
+	print("")
+	print("--------------------------100%--------------------------")
+	matriz2+=np.logical_not(matriz2).tolist()
+	print(time.time()-ini)
+	return matriz2
