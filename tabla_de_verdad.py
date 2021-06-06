@@ -68,9 +68,9 @@ def tabla_bruta (numero):
 		ceros=memoria/2
 		veces=total/ceros
 		for index in range(int(veces)):
-			valor=bool( index%2)
-			matriz+=[valor]*int(ceros)
-			print(valor,(index/total)*100,"%",end='             \r')
+			for _ in range(int(ceros)):
+				matriz.append(bool( index%2))
+			#print(valor,(index/total)*100,"%",end='             \r')
 		memoria=memoria/2
 	print(time.time()-ini)
 	return matriz
