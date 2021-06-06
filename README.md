@@ -44,6 +44,18 @@ Posibilidades: 32
 [1, 1, 1, 1, 1]
 ```
 
+```
+>>> tabla_de_verdad.getValores(5,1)
+[0, 0, 0, 0, 0]
+>>> tabla_de_verdad.getValores(5,2)
+[0, 0, 0, 0, 1]
+>>> tabla_de_verdad.getValores(5,21)
+[1, 0, 1, 0, 0]
+>>> tabla_de_verdad.getValores(5,32)
+[1, 1, 1, 1, 1]
+```
+
+
 ## Pruebas de velocidad 
 ### Python
 ```
