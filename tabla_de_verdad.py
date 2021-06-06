@@ -26,7 +26,7 @@ def tabla(numero):
 		#print(matriz2[index],(index/total)*100,"%",end='             \r')
 	print("")
 	print("--------------------------100%--------------------------")
-	print(time.time()-ini)
+	print(time.time()-ini,"seg")
 	return matriz2
 
 import numpy as np
@@ -55,7 +55,7 @@ def tabla_version2 (numero):
 	print("")
 	print("--------------------------100%--------------------------")
 	matriz2+=np.logical_not(matriz2).tolist()
-	print(time.time()-ini)
+	print(time.time()-ini,"seg")
 	return matriz2
 
 def tabla_bruta (numero):
@@ -72,7 +72,7 @@ def tabla_bruta (numero):
 				matriz.append(bool( index%2))
 			#print(valor,(index/total)*100,"%",end='             \r')
 		memoria=memoria/2
-	print(time.time()-ini)
+	print(time.time()-ini,"seg")
 	return matriz
 
 def tabla_bruta_version2 (numero):
@@ -89,7 +89,7 @@ def tabla_bruta_version2 (numero):
 			matriz+=[valor]*int(ceros)
 			#print(valor,(index/total)*100,"%",end='             \r')
 		memoria=memoria/2
-	print(time.time()-ini)
+	print(time.time()-ini,"seg")
 	return matriz
 
 def tabla_version3 (numero):
@@ -108,7 +108,7 @@ def tabla_version3 (numero):
 	print("")
 	print("--------------------------100%--------------------------")
 	matriz2+=np.logical_not(matriz2).tolist()
-	print(time.time()-ini)
+	print(time.time()-ini,"seg")
 	return matriz2
 
 def tabla_version4 (numero):
@@ -127,11 +127,12 @@ def tabla_version4 (numero):
 	print("")
 	print("--------------------------100%--------------------------")
 	matriz2+=np.logical_not(matriz2).tolist()
-	print(time.time()-ini)
+	print(time.time()-ini,"seg")
 	return matriz2
 
 
 def getValores(numero,indice):
+	ini=time.time()
 	# ERROR ON getValores(20,29392)
 	# Falla cuando cuadrado>8, falta establecer una constante
 	total=2**numero
@@ -164,5 +165,6 @@ def getValores(numero,indice):
 		else:
 			resultado.append(int((indice//cuadrado)%2))
 		#print(indice,cuadrado)
+	print(time.time()-ini,"seg")
 	print(resultado)
-
+	return resultado
