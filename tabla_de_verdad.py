@@ -72,7 +72,7 @@ def tabla_bruta (numero):
 				matriz.append(bool( index%2))
 			#print(valor,(index/total)*100,"%",end='             \r')
 		memoria=memoria/2
-	print(time.time()-ini,"seg")
+	print(time.time()-ini,"seg","creando la tabla bruta")
 	return matriz
 
 def tabla_bruta_version2 (numero):
@@ -89,7 +89,7 @@ def tabla_bruta_version2 (numero):
 			matriz+=[valor]*int(ceros)
 			#print(valor,(index/total)*100,"%",end='             \r')
 		memoria=memoria/2
-	print(time.time()-ini,"seg")
+	print(time.time()-ini,"seg","creando la tabla bruta")
 	return matriz
 
 def tabla_version3 (numero):
