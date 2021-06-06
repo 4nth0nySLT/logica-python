@@ -62,6 +62,7 @@ Posibilidades: 32
 
 ## Pruebas de velocidad 
 ### Python
+#### Tablas utilizando una tabla bruta, todas las respuestas, y luego separando
 ```
 >>> x=tabla_de_verdad.tabla(20)
 Posibilidades: 1048576
@@ -86,7 +87,13 @@ Posibilidades: 1048576
 --------------------------100%--------------------------
 4.103060483932495 seg
 ```
-#### posibles errores en las tablas anteriores
+#### Comprobacion de tabla completa y generador de resultados
+```
+>>> x=tabla_version4 (20)
+>>> for i in range(1,len(x)/2+1):
+...     print(x[i-1]==getValores(20,i),i)
+```
+#### Tablas utilizando un generador en cada una
 ```
 >>> x=tabla_version5(20)
 
@@ -96,7 +103,7 @@ Posibilidades: 1048576
 6.666651964187622
 ```
 
-### Go
+### Go, tabla bruta sin separarla
 ```
 >>> go run tabla_de_verdad.go 20 tabla_bruta
 Posibilidades: 1048576
