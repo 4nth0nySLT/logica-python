@@ -168,3 +168,20 @@ def getValores(numero,indice):
 	print(time.time()-ini,"seg")
 	print(resultado)
 	return resultado
+
+def bin(cuadrado,indice):
+	minimo=int(indice/cuadrado)
+	if minimo+1==indice:
+		minimo=int(indice-1/cuadrado)
+	return minimo%2
+	#return int(indice/cuadrado)%2 if indice!=int(indice/cuadrado)+1 else int(indice-1/cuadrado)%2
+
+def getValores(numero,indice):
+	if indice>2**numero:
+		return
+	cuadrados=[(2**cuadrado)/2 for cuadrado in range(1,numero+1)][::-1]
+	return [bin(cuadrado,indice-1) for cuadrado in cuadrados]
+
+getValores_unalinea=lambda numero,indice: [int((indice-1)/cuadrado)%2 if (indice-1)!=int((indice-1)/cuadrado)+1 else int((indice-1)-1/cuadrado)%2  for cuadrado in [(2**cuadrado)/2 for cuadrado in range(1,numero+1)][::-1]] 
+
+
