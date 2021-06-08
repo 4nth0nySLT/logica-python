@@ -145,7 +145,19 @@ def getValores(numero,indice):
 	cuadrados=[(2**cuadrado)/2 for cuadrado in range(1,numero+1)][::-1]
 	return [bin(cuadrado,indice) for cuadrado in cuadrados]
 
+def getValores_version2(numero,indice,restas=[]):
+	cuadrados=[(2**cuadrado)/2 for cuadrado in range(1,numero+1)][::-1]
+	return [1 if (indice-sum(restas)>=cuadrados[i] and restas.append(cuadrados[i])==None)  else 0 for i in range(len(cuadrados))] if restas.clear()==None else "xd"
+	#return [1 if cuadrados[i+1]<=( ( indice-sum(restas) if (indice-sum(restas)>=cuadrados[i] and restas.append(cuadrados[i])==None and print(restas,indice,indice-sum(restas),i)==None) else indice) if i!=0 else indice) else 0 for i in range(len(cuadrados))]
+
+
 getValores_unalinea=lambda numero,indice: [int((indice)/cuadrado)%2 if (indice)!=int((indice)/cuadrado)+1 else int((indice)-1/cuadrado)%2  for cuadrado in [(2**cuadrado)/2 for cuadrado in range(1,numero+1)][::-1]] 
+
+
+
+getValores_unalinea_version2=lambda numero,indice,restas=[]: [1 if (indice-sum(restas)>=cuadrado and restas.append(cuadrado)==None) else 0 for cuadrado in [(2**cuadrado)/2 for cuadrado in range(1,numero+1)][::-1]] if restas.clear()==None else "xd"
+
+
 
 def bin_to_num(cuadrado,binario):
 	if binario==1:
